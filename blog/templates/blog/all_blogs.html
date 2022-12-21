@@ -1,25 +1,9 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
 <h1> Blogs</h1>
 
-{{blog}}
-
-{{ blog }}
-
 {% for blog in blogs %}
-
-
-
-
-<h2>{{blog.btitle}}</h2>
-
-
-<p>{{blog.bcontent}}</p>
-
-{{blog.image.url}}
-
-<img src="{{blog.image.url}}" height=100 width=100>
-
-{% if egg.url %}
-<br><a href="{{blog.url}}">Link</a>
-{% endif %}
-
+<h2>{{blog.title}}</h2>
+<h5>{{blog.date}}</h5>
+<p>{{blog.description}}</p>
 {% endfor %}

@@ -1,5 +1,12 @@
 <h1> Nome Portfolio</h1>
 
+
+{% load static %}
+
+<a href="{% static 'portfolio/resume.pdf' %}">Resume</a>
+
+<img src="{% static 'portfolio/NS_Passport_Photo.jpg' %}">
+
 {% for egg in projects %}
 
 <h2>{{egg.title}}</h2>
