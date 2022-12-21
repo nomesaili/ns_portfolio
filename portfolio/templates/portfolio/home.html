@@ -1,0 +1,17 @@
+<h1> Nome Portfolio</h1>
+
+{% for egg in projects %}
+
+<h2>{{egg.title}}</h2>
+
+<p>{{egg.describtion}}</p>
+
+{{egg.image.url}}
+
+<img src="{{egg.image.url}}" height=100 width=100>
+
+{% if egg.url %}
+<br><a href="{{egg.url}}">Link</a>
+{% endif %}
+
+{% endfor %}

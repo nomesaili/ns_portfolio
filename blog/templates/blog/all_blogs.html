@@ -1,0 +1,25 @@
+<h1> Blogs</h1>
+
+{{blog}}
+
+{{ blog }}
+
+{% for blog in blogs %}
+
+
+
+
+<h2>{{blog.btitle}}</h2>
+
+
+<p>{{blog.bcontent}}</p>
+
+{{blog.image.url}}
+
+<img src="{{blog.image.url}}" height=100 width=100>
+
+{% if egg.url %}
+<br><a href="{{blog.url}}">Link</a>
+{% endif %}
+
+{% endfor %}
