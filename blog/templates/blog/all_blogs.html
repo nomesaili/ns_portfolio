@@ -1,9 +1,17 @@
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
 
 <h1> Blogs</h1>
 
+<h2> Nome has written {{blogs.count}} blog{{blogs.count|pluralize}}</h2>
+
 {% for blog in blogs %}
-<h2>{{blog.title}}</h2>
-<h5>{{blog.date}}</h5>
-<p>{{blog.description}}</p>
+
+<a href="{% url 'blog:detail' blog.id %}">
+<h2>{{blog.title}}</h2></a>
+<h5>{{blog.date|date:'M d Y'|upper}}</h5>
+<p>{{blog.description|truncatechars:100}}</p>
 {% endfor %}
+
+{% endblock %}
